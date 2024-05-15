@@ -31,10 +31,16 @@ class ContatoController extends Controller
         $request->validate([
             'nome'=>'required',
             'telefone'=>'required',
-            'email'=>'required',
-            'motivo_contato'=>'required',
+            'email'=>'email',
+            'motivo_contatos_id'=>'required',
             'mensagem'=>'required'
-        ]);
+        ],
+    [
+        'email.email' =>'O campo email precisa ser preenchido com um email valido',
+        'required'=>'O campo precisa ser preenchido'
+        
+    ]);
         SiteContato::create($request->all());
+        return redirect()->route('site.index');
     }
 }
