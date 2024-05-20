@@ -2,7 +2,7 @@
 
 
 @section('conteudo')
- @include('site.layout._partials.topo')
+ @include('site.layouts._partials.topo')
         <div class="conteudo-pagina">
             <div class="titulo-pagina">
                 <h1>Olá, eu sou o Super Gestão</h1>
