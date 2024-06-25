@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Produto;
 use App\Unidade;
+use App\ProdutoDetalhe;
 use Illuminate\Http\Request;
 
 
@@ -17,6 +18,8 @@ class ProdutoController extends Controller
     public function index(Request $request)
     {
         $produtos = Produto::paginate(15);
+
+      
         
        return view('app.produto.index',['produtos'=>$produtos , 'request'=>$request->all()]);
         
