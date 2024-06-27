@@ -18,7 +18,7 @@ class ProdutoController extends Controller
      */
     public function index(Request $request)
     {
-        $produtos = Item::with(['itemDetalhe'])->paginate(15);
+        $produtos = Item::with(['itemDetalhe','fornecedor'])->paginate(15);
 
       
         
