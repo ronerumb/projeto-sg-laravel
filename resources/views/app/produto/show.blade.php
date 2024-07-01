@@ -41,6 +41,10 @@
                     <td>Unidade de Medida:</td>
                     <td>{{$produto->unidade_id}}</td>
                 </tr>
+                <tr>
+                    <td>Fornecedor:</td>
+                    <td>{{$produto->fornecedor_id}}</td>
+                </tr>
             </table>
 
         </div>
